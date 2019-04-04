@@ -32,26 +32,36 @@
             url('img/balloon-1.jpg') no-repeat center;
             background-size: cover;
         }
+        .text-vertical-center {
+            text-align: center;
+            vertical-align: middle;
+            display: table-cell;
+            color: white;
+        }
         h1, h2 {
             color: white;
         }
         .container h1, .container h2 {
             color: black;
         }
-        .photo {
-            background: black;
+        .photos {
+            margin: 10px 0 10px 0;
+        }
+        img {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 
 <body>
-    <header id="landing">
+    <heading id="landing">
         <div class="text-vertical-center">
             <h1>Skydance Hot Air Balloon</h1>
             <h2>Ride with the wind.</h2>
             <h2>Dance with the sky.</h2>
         </div>
-    </header>
+    </heading>
     
     <div class="container">
         <h1>HOME</h1>
@@ -72,7 +82,24 @@
         <h1>GALLERY</h1>
         <div class="row">
             <div class="photo">
-                
+                <div class="photos col-md-6 col-lg-4">
+                   <img src="img/balloon-2.jpg"> 
+                </div>
+                <div class="photos col-md-6 col-lg-4">
+                   <img src="img/balloon-3.jpg"> 
+                </div>
+                <div class="photos col-md-6 col-lg-4">
+                   <img src="img/balloon-4.jpg"> 
+                </div>
+                <div class="photos col-md-6 col-lg-4">
+                   <img src="img/balloon-5.jpg"> 
+                </div>
+                <div class="photos col-md-6 col-lg-4">
+                   <img src="img/balloon-6.jpg"> 
+                </div>
+                <div class="photos col-md-6 col-lg-4">
+                   <img src="img/balloon-1.jpg"> 
+                </div>
             </div>
         </div>
     </div>
@@ -86,10 +113,6 @@
         <h3>"What an experience!! I can't stop talking about it with my family. Thank you for the life-long memory!"-- Tammy P.</h3>
         <h3>"Thank you so much for the experience. It was delightful- awesome- wonderful - I will never forget my 80th Brithday"-- Ethel E.</h3>
         <h3>"What an awesome way to remember my anniversary! I know I will always remember this experience. Thank you again!"-- Mary C.</h3>
-    </div>
-    
-    <div class="container">
-        
     </div>
     
     <div class="container">
