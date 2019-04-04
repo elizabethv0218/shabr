@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title>SHABR</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" href="nav.css">
     <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <style>
         html,
         body {
@@ -29,8 +30,8 @@
             display: table;
             width: 100%;
             height: 100%;
-            background: linear-gradient( rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)),
+            background: linear-gradient( rgba(0, 0, 100, 0.5),
+            rgba(0, 100, 0, 0.5)),
             url('img/balloon-1.jpg') no-repeat center;
             background-size: cover;
         }
@@ -45,15 +46,37 @@
         h1,
         h2 {
             color: white;
+            font-family: Nunito;
         }
-
+        /*xs*/
+        #landing h1 {
+            font-size: 50px;
+        }
+        #landing h2 {
+            font-size: 30px;
+        }
+        /*sm*/
+        @media(min-width:768px){
+            #landing h1 {font-size:70px;}
+            #landing h2 {font-size:40px;}
+        }
+        /*md*/
+        @media(min-width:992px){
+            #landing h1 {font-size:90px;}
+            #landing h2 {font-size:50px;}
+        }
+        /*lg*/
+        @media(min-width:1200px){
+            #landing h1 {font-size:110px;}
+            #landing h2 {font-size:60px;}
+        }
         .container h1,
         .container h2 {
             color: black;
         }
 
         .photos {
-            margin: 10px 0 10px 0;
+            margin: 15px 0 15px 0;
         }
 
         img {
@@ -61,16 +84,38 @@
             height: 100%;
         }
         .container {
-            padding: 30px 100px 30px 100px;
+            margin-top:70px;
+            margin-bottom:70px;
+            border-radius: 10px;
         }
-        #contact{
-            width: 100%;
-            background-color: gray;
+        #info, #info h1, #info h2, #testimonials, #testimonials h1, #testimonials h2 {
+            background-color: rgb(161,214,226);
+        }
+        #home, #home h1, #home h2, #gallery, #gallery h1 {
+            color: rgb(0,108,132);
+            background-color: rgb(226,232,228);
+        }
+        #contact {
+            /*width: 100%;*/
+            background-color: #666666;
             color: white;
+            margin-bottom:0px;
         }
         #contact h1, #contact h2 {
             color: white;
         } 
+        #testimonials .col-md-offset-6 {
+            text-align:right;
+        }
+        #testimonials .col-xs-12 {
+            padding: 15px 0 15px 0;
+        }
+        #testimonials .col-md-6 {
+            padding: 0 0 0 0;
+        }
+        #testimonials .row {
+            padding: 0 30px 0 30px;
+        }
     </style>
 </head>
 
@@ -111,12 +156,16 @@
     </div>
 
     <div class="container" id="info">
-        <h1>Info</h1>
+        <h1>INFO</h1>
         <h2>All the information you'll need</h2>
         <h3>Time</h3>
+        <p>Due to climatic conditions, we can safely fly only in the early morning hours with our primary season and most beautiful months being May through November. Since our launch times vary through the seasons, we ask all our guests to call ahead for the exact meeting time.</p>
         <h3>Weather</h3>
-        <h3>Testimonials</h3>
+        <p>High winds and/or inclement weather prevent us from flying. We ask all our guests to contact us in the early afternoon prior to their scheduled flight between 12:00 noon and 2:00 p.m. to verify that the forecasted weather conditions will allow their balloon flight.</p>
+        <h3>Flight</h3>
+        <p>Our actual flight time is approximately one to one and a half hours averaging closer to one and a half hours and we suggest to allow three to three and a half hours for the entire adventure.</p>
         <h3>Participation</h3>
+        <p>We encourage all of our guests, if they wish, to participate in both the inflation and deflation of the balloon. We have found it adds greatly to the fun of the entire ballooning experience.</p>
     </div>
 
     <div class="container" id="gallery">
@@ -146,14 +195,29 @@
     </div>
 
     <div class="container" id="testimonials">
-        <h1>Testimonials</h1>
+        <h1>TESTIMONIALS</h1>
         <h2>Just a few of our happy customers</h2>
-        <h3>"Thank you for a wonderful memory. I was smiling the entire time. We shall always cherish this morning"-- Joan H.</h3>
-        <h3>"I haven't come down to earth since our balloon ride. We are so pleased that we chose SHABR"-- Marsha N.</h3>
-        <h3>"Thanks so much for making our experience so perfect. I definitely want to go back again!"-- Linda T.</h3>
-        <h3>"What an experience!! I can't stop talking about it with my family. Thank you for the life-long memory!"-- Tammy P.</h3>
-        <h3>"Thank you so much for the experience. It was delightful- awesome- wonderful - I will never forget my 80th Brithday"-- Ethel E.</h3>
-        <h3>"What an awesome way to remember my anniversary! I know I will always remember this experience. Thank you again!"-- Mary C.</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>"Thank you for a wonderful memory. I was smiling the entire time. We shall always cherish this morning"<br>-- Joan H.</h3>
+            </div>
+            <div class="col-xs-12 col-md-6 col-md-offset-6">
+                <h3>"I haven't come down to earth since our balloon ride. We are so pleased that we chose SHABR"<br>-- Marsha N.</h3>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <h3>"Thanks so much for making our experience so perfect. I definitely want to go back again!"<br>-- Linda T.</h3>
+            </div>
+            <div class="col-xs-12 col-md-6 col-md-offset-6">
+                <h3>"What an experience!! I can't stop talking about it with my family. Thank you for the life-long memory!"<br>-- Tammy P.</h3>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <h3>"Thank you so much for the experience. It was delightful- awesome- wonderful - I will never forget my 80th Brithday"<br>-- Ethel E.</h3>
+            </div>
+            <div class="col-xs-12 col-md-6 col-md-offset-6">
+                <h3>"What an awesome way to remember my anniversary! I know I will always remember this experience. Thank you again!"<br>-- Mary C.</h3>
+            </div>
+        </div>
+        
     </div>
     
     <div id="contact" class="container">
