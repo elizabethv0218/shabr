@@ -84,19 +84,17 @@
             height: 100%;
         }
         .container {
-            margin-top:70px;
-            margin-bottom:70px;
-            border-radius: 10px;
+            padding-top:70px;
+            padding-bottom:70px;
         }
-        #info, #info h1, #info h2, #testimonials, #testimonials h1, #testimonials h2 {
-            background-color: rgb(161,214,226);
+        #info, #info h1, #info h2, #testimonials, #testimonials h1, #testimonials h2, .bg-blue {
+            background-color: rgb(161,214,226); /*blue*/
         }
-        #home, #home h1, #home h2, #gallery, #gallery h1 {
+        #home, #home h1, #home h2, #gallery, #gallery h1, .bg-gray {
             color: rgb(0,108,132);
-            background-color: rgb(226,232,228);
+            background-color: rgb(226,232,228); /*gray*/
         }
-        #contact {
-            /*width: 100%;*/
+        #contact, .bg-dark {
             background-color: #666666;
             color: white;
             margin-bottom:0px;
@@ -112,9 +110,6 @@
         }
         #testimonials .col-md-6 {
             padding: 0 0 0 0;
-        }
-        #testimonials .row {
-            padding: 0 30px 0 30px;
         }
     </style>
 </head>
@@ -143,88 +138,103 @@
     </nav>
     <heading id="landing">
         <div class="text-vertical-center">
-            <h1>Skydance Hot Air Balloon</h1>
+            <h1>Skydance Hot Air Balloon Ride</h1>
             <h2>Ride with the wind.</h2>
             <h2>Dance with the sky.</h2>
         </div>
     </heading>
 
-    <div class="container" id="home">
-        <h1>HOME</h1>
-        <h2>Fun for everyone</h2>
-        <h3>Come make a new memory with us. There's nothing else like it. Fun for both adults and kids. All are welcome! Afraid of heights? You won't be after you slow-dance with the sky.</h3>
-    </div>
-
-    <div class="container" id="info">
-        <h1>INFO</h1>
-        <h2>All the information you'll need</h2>
-        <h3>Time</h3>
-        <p>Due to climatic conditions, we can safely fly only in the early morning hours with our primary season and most beautiful months being May through November. Since our launch times vary through the seasons, we ask all our guests to call ahead for the exact meeting time.</p>
-        <h3>Weather</h3>
-        <p>High winds and/or inclement weather prevent us from flying. We ask all our guests to contact us in the early afternoon prior to their scheduled flight between 12:00 noon and 2:00 p.m. to verify that the forecasted weather conditions will allow their balloon flight.</p>
-        <h3>Flight</h3>
-        <p>Our actual flight time is approximately one to one and a half hours averaging closer to one and a half hours and we suggest to allow three to three and a half hours for the entire adventure.</p>
-        <h3>Participation</h3>
-        <p>We encourage all of our guests, if they wish, to participate in both the inflation and deflation of the balloon. We have found it adds greatly to the fun of the entire ballooning experience.</p>
-    </div>
-
-    <div class="container" id="gallery">
-        <h1>GALLERY</h1>
-        <div class="row">
-            <div class="photo">
-                <div class="photos col-md-6 col-lg-4">
-                    <img src="img/balloon-2.jpg">
-                </div>
-                <div class="photos col-md-6 col-lg-4">
-                    <img src="img/balloon-3.jpg">
-                </div>
-                <div class="photos col-md-6 col-lg-4">
-                    <img src="img/balloon-4.jpg">
-                </div>
-                <div class="photos col-md-6 col-lg-4">
-                    <img src="img/balloon-5.jpg">
-                </div>
-                <div class="photos col-md-6 col-lg-4">
-                    <img src="img/balloon-6.jpg">
-                </div>
-                <div class="photos col-md-6 col-lg-4">
-                    <img src="img/balloon-1.jpg">
-                </div>
-            </div>
+    <div class="bg-gray">
+        <div class="container" id="home">
+            <h1>HOME</h1>
+            <h2>Fun for everyone</h2>
+            <h3>Come make a new memory with us. There's nothing else like it. Fun for both adults and kids. All are welcome! Afraid of heights? You won't be after you slow-dance with the sky.</h3>
         </div>
     </div>
 
-    <div class="container" id="testimonials">
-        <h1>TESTIMONIALS</h1>
-        <h2>Just a few of our happy customers</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <h3>"Thank you for a wonderful memory. I was smiling the entire time. We shall always cherish this morning"<br>-- Joan H.</h3>
-            </div>
-            <div class="col-xs-12 col-md-6 col-md-offset-6">
-                <h3>"I haven't come down to earth since our balloon ride. We are so pleased that we chose SHABR"<br>-- Marsha N.</h3>
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <h3>"Thanks so much for making our experience so perfect. I definitely want to go back again!"<br>-- Linda T.</h3>
-            </div>
-            <div class="col-xs-12 col-md-6 col-md-offset-6">
-                <h3>"What an experience!! I can't stop talking about it with my family. Thank you for the life-long memory!"<br>-- Tammy P.</h3>
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <h3>"Thank you so much for the experience. It was delightful- awesome- wonderful - I will never forget my 80th Brithday"<br>-- Ethel E.</h3>
-            </div>
-            <div class="col-xs-12 col-md-6 col-md-offset-6">
-                <h3>"What an awesome way to remember my anniversary! I know I will always remember this experience. Thank you again!"<br>-- Mary C.</h3>
+    <div class="bg-blue">
+        <div class="container" id="info">
+            <h1>INFO</h1>
+            <h2>All the information you'll need</h2>
+            <h3>Time</h3>
+            <p>Due to climatic conditions, we can safely fly only in the early morning hours with our primary season and most beautiful months being May through November. Since our launch times vary through the seasons, we ask all our guests to call ahead for the exact meeting time.</p>
+            <h3>Weather</h3>
+            <p>High winds and/or inclement weather prevent us from flying. We ask all our guests to contact us in the early afternoon prior to their scheduled flight between 12:00 noon and 2:00 p.m. to verify that the forecasted weather conditions will allow their balloon flight.</p>
+            <h3>Flight</h3>
+            <p>Our actual flight time is approximately one to one and a half hours averaging closer to one and a half hours and we suggest to allow three to three and a half hours for the entire adventure.</p>
+            <h3>Participation</h3>
+            <p>We encourage all of our guests, if they wish, to participate in both the inflation and deflation of the balloon. We have found it adds greatly to the fun of the entire ballooning experience.</p>
+        </div>
+    </div>
+
+
+    <div class="bg-gray">
+        <div class="container" id="gallery">
+            <h1>GALLERY</h1>
+            <div class="row">
+                <div class="photo">
+                    <div class="photos col-md-6 col-lg-4">
+                        <img src="img/balloon-2.jpg">
+                    </div>
+                    <div class="photos col-md-6 col-lg-4">
+                        <img src="img/balloon-3.jpg">
+                    </div>
+                    <div class="photos col-md-6 col-lg-4">
+                        <img src="img/balloon-4.jpg">
+                    </div>
+                    <div class="photos col-md-6 col-lg-4">
+                        <img src="img/balloon-5.jpg">
+                    </div>
+                    <div class="photos col-md-6 col-lg-4">
+                        <img src="img/balloon-6.jpg">
+                    </div>
+                    <div class="photos col-md-6 col-lg-4">
+                        <img src="img/balloon-1.jpg">
+                    </div>
+                </div>
             </div>
         </div>
-        
     </div>
     
-    <div id="contact" class="container">
-        <h1>CONTACT</h1>
-        <h2>We'd love to hear from you</h2>
-        <p>Address<br> SHABR, Inc.<br> 1234 Shabr Road<br> Somewhere, OT 80013<br> Phone(555) 555-1234<br> Copyright © 2016 | SHABR</p>
+    <div class="bg-blue">
+        <div class="container" id="testimonials">
+            <h1>TESTIMONIALS</h1>
+            <h2>Just a few of our happy customers</h2>
+            <div class="row">
+                <div class="jumbotron col-md-6">
+                    <p>"Thank you for a wonderful memory. I was smiling the entire time. We shall always cherish this morning"<br>-- Joan H.</p>
+                </div>
+                <div class="jumbotron col-xs-12 col-md-6 col-md-offset-6">
+                    <p>"I haven't come down to earth since our balloon ride. We are so pleased that we chose SHABR"<br>-- Marsha N.</p>
+                </div>
+                <div class="jumbotron col-xs-12 col-md-6">
+                    <p>"Thanks so much for making our experience so perfect. I definitely want to go back again!"<br>-- Linda T.</p>
+                </div>
+                <div class="jumbotron col-xs-12 col-md-6 col-md-offset-6">
+                    <p>"What an experience!! I can't stop talking about it with my family. Thank you for the life-long memory!"<br>-- Tammy P.</p>
+                </div>
+                <div class="jumbotron col-xs-12 col-md-6">
+                    <p>"Thank you so much for the experience. It was delightful- awesome- wonderful - I will never forget my 80th Brithday"<br>-- Ethel E.</p>
+                </div>
+                <div class="jumbotron col-xs-12 col-md-6 col-md-offset-6">
+                    <p>"What an awesome way to remember my anniversary! I know I will always remember this experience. Thank you again!"<br>-- Mary C.</p>
+                </div>
+            </div>
+        </div>    
     </div>
+
+    <div class="bg-dark">
+        <div id="contact" class="container">
+            <h1>CONTACT</h1>
+            <h2>We'd love to hear from you</h2>
+            <p>Address<br> SHABR, Inc.<br> 1234 Shabr Road<br> Somewhere, OT 80013<br> Phone(555) 555-1234</p>
+            <h2 style="text-align:center">Copyright © 2016 | SHABR</h2>
+        </div>
+        <div>
+            
+        </div>
+    </div>
+
 
 </body>
 
