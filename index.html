@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="nav.css">
     <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    
     <style>
         html,
         body {
@@ -111,9 +112,9 @@
         #testimonials .col-md-6 {
             padding: 0 0 0 0;
         }
-        blockquote {
-            border-left: 5px dashed rgb(51,51,51);
-        }
+        /*blockquote {*/
+        /*    border-left: 5px dashed rgb(51,51,51);*/
+        /*}*/
         .blockquote-reverse {
             border-right: 5px dashed rgb(51,51,51);
         }
@@ -131,6 +132,14 @@
         }
         #testimonials .row {
             margin-top: 30px;
+        }
+        .navbar{
+            text-shadow:1px 1px #BEBEBE ;
+        }
+        .photos{
+            padding:10px;
+            background-color:white;
+            box-shadow:5px 6px #888888;
         }
     </style>
 </head>
@@ -167,7 +176,7 @@
 
     <div class="bg-gray">
         <div class="container" id="home">
-            <h1>HOME</h1>
+            <h1><span class="label label-info">Home</span></h1>
             <h2>Fun for everyone</h2>
             <p>Come make a new memory with us. There's nothing else like it. Fun for both adults and kids. All are welcome! Afraid of heights? You won't be after you slow-dance with the sky.</p>
         </div>
@@ -175,7 +184,7 @@
 
     <div class="bg-blue">
         <div class="container" id="info">
-            <h1>INFO</h1>
+            <h1><span class="label label-primary">Info</span></h1>
             <h2>All the information you'll need</h2>
             <h3>Time</h3>
             <p>Due to climatic conditions, we can safely fly only in the early morning hours with our primary season and most beautiful months being May through November. Since our launch times vary through the seasons, we ask all our guests to call ahead for the exact meeting time.</p>
@@ -191,7 +200,7 @@
 
     <div class="bg-gray">
         <div class="container" id="gallery">
-            <h1>GALLERY</h1>
+            <h1><span class="label label-info">Gallery</span></h1>
             <div class="row">
                 <div class="photo">
                     <div class="photos col-md-6 col-lg-4">
@@ -219,7 +228,7 @@
     
     <div class="bg-blue">
         <div class="container" id="testimonials">
-            <h1>TESTIMONIALS</h1>
+            <h1><span class="label label-primary">Testimonials</span></h1>
             <h2>Just a few of our happy customers</h2>
             <div class="row">
                 <blockquote class="col-md-6">
