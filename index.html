@@ -21,8 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     
     <style>
-        html,
-        body {
+        html, body {
             width: 100%;
             height: 100%;
         }
@@ -44,8 +43,7 @@
             color: white;
         }
 
-        h1,
-        h2 {
+        h1, h2 {
             color: white;
             font-family: Nunito;
         }
@@ -60,19 +58,38 @@
         @media(min-width:768px){
             #landing h1 {font-size:70px;}
             #landing h2 {font-size:40px;}
+            /*.label {font-size:38px;}*/
+            .container h2 {font-size: 50px;}
+            .table {font-size:17px;}
+            #home p {font-size:17px} 
+            #home .text-center{text-align: center;}
+            #info h3 {font-size:26px;}
+            #info p {font-size:15px;}
         }
         /*md*/
         @media(min-width:992px){
             #landing h1 {font-size:90px;}
             #landing h2 {font-size:50px;}
+            blockquote, .blockquote-reverse{border-width:10px;}
+            /*.label {font-size:46px;}*/
+            .container h2 {font-size: 60px;}
+            .table {font-size:19px;}
+            #home p {font-size:22px;}
+            #info h3 {font-size:30px;}
+            #info p {font-size:16px;}
         }
         /*lg*/
         @media(min-width:1200px){
             #landing h1 {font-size:110px;}
             #landing h2 {font-size:60px;}
+            /*.label {font-size: 52px;}*/
+            .container h2 {font-size: 70px;}
+            .table {font-size:22px;}
+            #home p {font-size: 25px;}
+            #info h3 {font-size:34px;}
+            #info p {font-size:17px;}
         }
-        .container h1,
-        .container h2 {
+        .container h1, .container h2 {
             color: black;
         }
 
@@ -88,17 +105,33 @@
             padding-top:50px;
             padding-bottom:50px;
         }
-        #info, #info h1, #info h2, #testimonials, #testimonials h1, #testimonials h2, .bg-blue {
+        #info, #info h1, #info h2, #info .breadcrumb, #testimonials, #testimonials h1, #testimonials h2, #testimonials .breadcrumb, .bg-blue {
             background-color: rgb(161,214,226); /*blue*/
         }
-        #home, #home h1, #home h2, #gallery, #gallery h1, .bg-gray {
+        .active {
+            color:black;
+        }
+        .breadcrumb > li + li:before {
+            color: black;
+            content: "> ";
+            padding: 0 5px;
+        }
+        #home, #home h1, #home h2, #home .breadcrumb, #gallery, #gallery h1, #gallery .breadcrumb, .bg-gray, .navbar {
             color: rgb(0,108,132);
             background-color: rgb(226,232,228); /*gray*/
         }
-        #contact, .bg-dark {
+        #contact, .bg-dark, #contact .breadcrumb {
             background-color: #666666;
             color: white;
             /*padding-bottom:0px;*/
+        }
+        #contact .breadcrumb > li + li:before {
+            color: white;
+            content: "> ";
+            padding: 0 5px;
+        }
+        #contact li, #contact a {
+            color: white;
         }
         #contact h1, #contact h2 {
             color: white;
@@ -112,16 +145,11 @@
         #testimonials .col-md-6 {
             padding: 0 0 0 0;
         }
-        /*blockquote {*/
-        /*    border-left: 5px dashed rgb(51,51,51);*/
-        /*}*/
-        .blockquote-reverse {
-            border-right: 5px dashed rgb(51,51,51);
+        blockquote {
+            border-left: 5px solid rgb(51,51,51);
         }
-        @media(min-width:992px){
-            blockquote, .blockquote-reverse{
-                border-width:10px;
-            }
+        .blockquote-reverse {
+            border-right: 5px solid rgb(51,51,51);
         }
         blockquote p {
             /*padding-left: 15px;*/
@@ -141,17 +169,18 @@
             background-color:white;
             box-shadow:5px 6px #888888;
         }
+        #home .text-center {
+            text-align:left;
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="glyphicon glyphicon-menu-down"></span>
                 </button>
                 <a class="navbar-brand" href="#landing">SHABR</a>
             </div>
@@ -177,23 +206,43 @@
     <div class="bg-gray">
         <div class="container" id="home">
             <h1><span class="label label-info">Home</span></h1>
+            <ul class="breadcrumb">
+                <li><a href="#landing">SHABR</a></li>
+                <li class="active">HOME</li>
+            </ul>
             <h2>Fun for everyone</h2>
-            <p>Come make a new memory with us. There's nothing else like it. Fun for both adults and kids. All are welcome! Afraid of heights? You won't be after you slow-dance with the sky.</p>
+            <p class="text-center">Come make a new memory with us. There's nothing else like it.<br><br>Fun for both adults and kids. All are welcome!<br><br> Afraid of heights? You won't be after you slow-dance with the sky.</p>
         </div>
     </div>
 
     <div class="bg-blue">
         <div class="container" id="info">
             <h1><span class="label label-primary">Info</span></h1>
+            <ul class="breadcrumb">
+                <li><a href="#landing">SHABR</a></li>
+                <li class="active">INFO</li>
+            </ul>
             <h2>All the information you'll need</h2>
-            <h3>Time</h3>
-            <p>Due to climatic conditions, we can safely fly only in the early morning hours with our primary season and most beautiful months being May through November. Since our launch times vary through the seasons, we ask all our guests to call ahead for the exact meeting time.</p>
-            <h3>Weather</h3>
-            <p>High winds and/or inclement weather prevent us from flying. We ask all our guests to contact us in the early afternoon prior to their scheduled flight between 12:00 noon and 2:00 p.m. to verify that the forecasted weather conditions will allow their balloon flight.</p>
-            <h3>Flight</h3>
-            <p>Our actual flight time is approximately one to one and a half hours averaging closer to one and a half hours and we suggest to allow three to three and a half hours for the entire adventure.</p>
-            <h3>Participation</h3>
-            <p>We encourage all of our guests, if they wish, to participate in both the inflation and deflation of the balloon. We have found it adds greatly to the fun of the entire ballooning experience.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Time</h3>
+                    <p>Due to climatic conditions, we can safely fly only in the early morning hours with our primary season and most beautiful months being May through November. Since our launch times vary through the seasons, we ask all our guests to call ahead for the exact meeting time.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Weather</h3>
+                    <p>High winds and/or inclement weather prevent us from flying. We ask all our guests to contact us in the early afternoon prior to their scheduled flight between 12:00 noon and 2:00 p.m. to verify that the forecasted weather conditions will allow their balloon flight.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Flight</h3>
+                    <p>Our actual flight time is approximately one to one and a half hours averaging closer to one and a half hours and we suggest to allow three to three and a half hours for the entire adventure.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Participation</h3>
+                    <p>We encourage all of our guests, if they wish, to participate in both the inflation and deflation of the balloon. We have found it adds greatly to the fun of the entire ballooning experience.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -201,6 +250,10 @@
     <div class="bg-gray">
         <div class="container" id="gallery">
             <h1><span class="label label-info">Gallery</span></h1>
+            <ul class="breadcrumb">
+                <li><a href="#landing">SHABR</a></li>
+                <li class="active">GALLERY</li>
+            </ul>
             <div class="row">
                 <div class="photo">
                     <div class="photos col-md-6 col-lg-4">
@@ -229,25 +282,29 @@
     <div class="bg-blue">
         <div class="container" id="testimonials">
             <h1><span class="label label-primary">Testimonials</span></h1>
+            <ul class="breadcrumb">
+                <li><a href="#landing">SHABR</a></li>
+                <li class="active">TESTIMONIALS</li>
+            </ul>
             <h2>Just a few of our happy customers</h2>
             <div class="row">
                 <blockquote class="col-md-6">
-                    <p class="lead">"Thank you for a wonderful memory. I was smiling the entire time. We shall always cherish this morning"<br>-- Joan H.</p>
+                    <p class="lead">"Thank you for a wonderful memory. I was smiling the entire time. We shall always cherish this morning"<br><span class="glyphicon glyphicon-user"></span> -- Joan H.</p>
                 </blockquote>
                 <blockquote class="col-xs-12 col-md-6 col-md-offset-6 blockquote-reverse">
-                    <p class="lead">"I haven't come down to earth since our balloon ride. We are so pleased that we chose SHABR"<br>-- Marsha N.</p>
+                    <p class="lead">"I haven't come down to earth since our balloon ride. We are so pleased that we chose SHABR"<br><span class="glyphicon glyphicon-user"></span> -- Marsha N.</p>
                 </blockquote>
                 <blockquote class="col-xs-12 col-md-6">
-                    <p class="lead">"Thanks so much for making our experience so perfect. I definitely want to go back again!"<br>-- Linda T.</p>
+                    <p class="lead">"Thanks so much for making our experience so perfect. I definitely want to go back again!"<br><span class="glyphicon glyphicon-user"></span> -- Linda T.</p>
                 </blockquote>
                 <blockquote class="col-xs-12 col-md-6 col-md-offset-6 blockquote-reverse">
-                    <p class="lead">"What an experience!! I can't stop talking about it with my family. Thank you for the life-long memory!"<br>-- Tammy P.</p>
+                    <p class="lead">"What an experience!! I can't stop talking about it with my family. Thank you for the life-long memory!"<br><span class="glyphicon glyphicon-user"></span> -- Tammy P.</p>
                 </blockquote>
                 <blockquote class="col-xs-12 col-md-6">
-                    <p class="lead">"Thank you so much for the experience. It was delightful- awesome- wonderful - I will never forget my 80th Brithday"<br>-- Ethel E.</p>
+                    <p class="lead">"Thank you so much for the experience. It was delightful- awesome- wonderful - I will never forget my 80th Brithday"<br><span class="glyphicon glyphicon-user"></span> -- Ethel E.</p>
                 </blockquote>
                 <blockquote class="col-xs-12 col-md-6 col-md-offset-6 blockquote-reverse">
-                    <p class="lead">"What an awesome way to remember my anniversary! I know I will always remember this experience. Thank you again!"<br>-- Mary C.</p>
+                    <p class="lead">"What an awesome way to remember my anniversary! I know I will always remember this experience. Thank you again!"<br><span class="glyphicon glyphicon-user"></span> -- Mary C.</p>
                 </blockquote>
             </div>
         </div>    
@@ -255,13 +312,17 @@
 
     <div class="bg-dark">
         <div id="contact" class="container" style="padding-bottom:25px">
-            <h1>CONTACT</h1>
+            <h1>Contact</h1>
+            <ul class="breadcrumb">
+                <li><a href="#landing">SHABR</a></li>
+                <li class="active">CONTACT</li>
+            </ul>
             <h2>We'd love to hear from you</h2>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Address</th>
-                        <th>Phone</th>
+                        <th><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;&nbsp;Address</th>
+                        <th><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;&nbsp;Phone</th>
                     </tr>
                 </thead>
                 <tbody>
