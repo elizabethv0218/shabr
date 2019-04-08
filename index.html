@@ -19,51 +19,47 @@
     <link rel="stylesheet" href="nav.css">
     <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
     
     <style>
-        html, body {
+        html, body, img, #landing {
             width: 100%;
             height: 100%;
+            font-family: Merriweather Sans;
         }
-        
         #landing {
             display: table;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient( rgba(0, 0, 100, 0.5),
-            rgba(0, 100, 0, 0.5)),
+            background: linear-gradient( rgba(0, 0, 150, 0.5),
+            rgba(0, 150, 0, 0.5)),
             url('img/balloon-1.jpg') no-repeat center;
             background-size: cover;
         }
-
         .text-vertical-center {
             text-align: center;
             vertical-align: middle;
             display: table-cell;
             color: white;
         }
-
-        h1 {
-            color: white;
-            font-family: 'Open Sans', sans-serif;
-        } 
-        h2 {
+        h1, h2 {
             color: white;
             font-family: Nunito;
         }
-        /*xs*/
         #landing h1 {
             font-size: 50px;
         }
         #landing h2 {
             font-size: 30px;
         }
+        #myCarousel {
+            display: block;
+        }
+        #gallery .row {
+            display: none;
+        }
         /*sm*/
         @media(min-width:768px){
             #landing h1 {font-size:70px;}
             #landing h2 {font-size:40px;}
-            /*.label {font-size:38px;}*/
             .container h2 {font-size: 50px;}
             .table {font-size:17px;}
             #home p {font-size:17px} 
@@ -71,23 +67,23 @@
             #info h3 {font-size:26px;}
             #info p {font-size:15px;}
         }
-        /*md*/
+        /*medium*/
         @media(min-width:992px){
             #landing h1 {font-size:90px;}
             #landing h2 {font-size:50px;}
             blockquote, .blockquote-reverse{border-width:10px;}
-            /*.label {font-size:46px;}*/
             .container h2 {font-size: 60px;}
             .table {font-size:19px;}
             #home p {font-size:22px;}
             #info h3 {font-size:30px;}
             #info p {font-size:16px;}
+            #myCarousel {display: none;}
+            #gallery .row {display: block;}
         }
         /*lg*/
         @media(min-width:1200px){
             #landing h1 {font-size:110px;}
             #landing h2 {font-size:60px;}
-            /*.label {font-size: 52px;}*/
             .container h2 {font-size: 70px;}
             .table {font-size:22px;}
             #home p {font-size: 25px;}
@@ -97,14 +93,8 @@
         .container h1, .container h2 {
             color: black;
         }
-
         table, .photos {
             margin: 15px 0 15px 0;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
         }
         .container {
             padding-top:50px;
@@ -112,9 +102,6 @@
         }
         #info, #info h1, #info h2, #info .breadcrumb, #testimonials, #testimonials h1, #testimonials h2, #testimonials .breadcrumb, .bg-blue {
             background-color: rgb(161,214,226); /*blue*/
-        }
-        .active {
-            color:black;
         }
         .breadcrumb > li + li:before {
             color: black;
@@ -128,19 +115,18 @@
         #contact, .bg-dark, #contact .breadcrumb {
             background-color: #666666;
             color: white;
-            /*padding-bottom:0px;*/
         }
         #contact .breadcrumb > li + li:before {
             color: white;
             content: "> ";
             padding: 0 5px;
         }
-        #contact li, #contact a {
+        #contact h1, #contact h2, #contact li, #contact a  {
             color: white;
         }
-        #contact h1, #contact h2 {
-            color: white;
-        } 
+        #home li, #info li, #gallery li, #testimonials li {
+            color: rgb(102,102,102);
+        }
         #testimonials .col-md-offset-6 {
             text-align:right;
         }
@@ -157,7 +143,6 @@
             border-right: 5px solid rgb(51,51,51);
         }
         blockquote p {
-            /*padding-left: 15px;*/
             padding: 20px;
         }
         .blockquote-reverse p {
@@ -169,19 +154,11 @@
         .navbar{
             text-shadow:1px 1px #BEBEBE ;
         }
-        .photos{
+        .photos, #myCarousel{
             padding:10px;
             background-color:white;
             box-shadow:5px 6px #888888;
         }
-        #home .text-center {
-            text-align:left;
-        }
-        img {
-           width:100%;
-           height:100%;
-        }
-        
     </style>
 </head>
 
@@ -211,46 +188,6 @@
             <h2>Ride with the wind.</h2>
             <h2>Dance with the sky.</h2>
         </div>
-<!--
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-
-      <div class="item active">
-        <img src="img/balloon-1.jpg" alt="pic1">
-        <div class="carousel-caption">
-        </div>
-        </div>
-
-      <div class="item">
-        <img src="img/balloon-2.jpg" alt="pic2">
-        <div class="carousel-caption">
-        </div>
-      </div>
-    
-      <div class="item">
-        <img src="img/balloon-3.jpg" alt="pic3">
-        <div class="carousel-caption">
-        </div>
-      </div>
-  
-    </div>
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
--->
-
-        
     </heading>
 
     <div class="bg-gray">
@@ -261,7 +198,7 @@
                 <li class="active">HOME</li>
             </ul>
             <h2>Fun for everyone</h2>
-            <p class="text-center">Come make a new memory with us. There's nothing else like it.<br><br>Fun for both adults and kids. All are welcome!<br><br> Afraid of heights? You won't be after you slow-dance with the sky.</p>
+            <p>Come make a new memory with us. There's nothing else like it.<br><br>Fun for both adults and kids. All are welcome!<br><br> Afraid of heights? You won't be after you slow-dance with the sky.</p>
         </div>
     </div>
 
@@ -325,6 +262,44 @@
                         <img src="img/balloon-1.jpg">
                     </div>
                 </div>
+            </div>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="img/balloon-2.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="img/balloon-3.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="img/balloon-4.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="img/balloon-5.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="img/balloon-6.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="img/balloon-1.jpg">
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
     </div>
