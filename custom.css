@@ -25,6 +25,13 @@ img,
 h1,
 h2 {
     color: white;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+} 
+
+h2 {
     font-family: Nunito;
 }
 
@@ -140,8 +147,7 @@ h2 {
     color: black;
 }
 
-table,
-.photos {
+table {
     margin: 15px 0 15px 0;
 }
 
@@ -161,6 +167,10 @@ table,
 .bg-blue {
     background-color: rgb(161, 214, 226);
     /*blue*/
+}
+
+.active {
+    color:black;
 }
 
 .breadcrumb>li+li:before {
@@ -241,9 +251,20 @@ blockquote p {
     margin-top: 30px;
 }
 
-.photos,
+.photos {
+    padding:15px;
+    border: 1px solid black;
+    background-color:white;
+    margin:36px;
+    box-shadow:10px 15px #BEBEBE;
+}
+
 #myCarousel {
     padding: 10px;
     background-color: white;
     box-shadow: 5px 6px #888888;
+}
+
+.photo {
+    margin: auto;
 }
